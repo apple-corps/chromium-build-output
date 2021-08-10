@@ -1,0 +1,114 @@
+14:08:46.203: INFO: run: /mnt/host/source/chroot/usr/libexec/qemu/bin/qemu-system-x86_64 --version
+14:08:46.219: INFO: QEMU version 5.2.0
+14:08:46.219: INFO: Pid file: /tmp/cros_vm_9222/kvm.pid
+14:08:46.219: INFO: /tmp/cros_vm_9222/kvm.pid does not exist.
+checking /mnt/host/source/chroot/usr/libexec/qemu/bin/qemu-system-x86_64
+14:08:46.221: INFO: run: /mnt/host/source/chroot/usr/libexec/qemu/bin/qemu-system-x86_64 -m 8G -smp 8 -vga virtio -daemonize -pidfile /tmp/cros_vm_9222/kvm.pid -chardev 'pipe,id=control_pipe,path=/tmp/cros_vm_9222/kvm.monitor' -serial file:/tmp/cros_vm_9222/kvm.monitor.serial -mon 'chardev=control_pipe' -cpu 'SandyBridge,-invpcid,-tsc-deadline,check,vmx=on' -usb -device usb-tablet -device 'virtio-net,netdev=eth0' -device 'virtio-scsi-pci,id=scsi' -device virtio-rng -device 'scsi-hd,drive=hd' -drive 'if=none,id=hd,file=/mnt/host/source/src/build/images/kukui/R94-14142.0.2021_08_09_1307-a1/chromiumos_image.bin,cache=unsafe,format=raw' -netdev 'user,id=eth0,net=10.0.2.0/27,hostfwd=tcp:127.0.0.1:9222-:22' -enable-kvm
+VNC server running on ::1:5900
+14:08:46.293: INFO: run: ssh -p 9222 '-oConnectTimeout=30' '-oConnectionAttempts=4' '-oNumberOfPasswordPrompts=0' '-oProtocol=2' '-oServerAliveInterval=15' '-oServerAliveCountMax=8' '-oStrictHostKeyChecking=no' '-oUserKnownHostsFile=/dev/null' '-oIdentitiesOnly=yes' -i /tmp/ssh-tmp92x7ntk1/testing_rsa root@localhost -- true
+14:09:16.330: INFO: (stdout):
+Connection timed out during banner exchange
+
+14:09:16.331: ERROR: Error connecting to device localhost
+14:09:21.334: INFO: run: ssh -p 9222 '-oConnectTimeout=30' '-oConnectionAttempts=4' '-oNumberOfPasswordPrompts=0' '-oProtocol=2' '-oServerAliveInterval=15' '-oServerAliveCountMax=8' '-oStrictHostKeyChecking=no' '-oUserKnownHostsFile=/dev/null' '-oIdentitiesOnly=yes' -i /tmp/ssh-tmp92x7ntk1/testing_rsa root@localhost -- true
+14:09:51.370: INFO: (stdout):
+Connection timed out during banner exchange
+
+14:09:51.371: ERROR: Error connecting to device localhost
+14:10:01.382: INFO: run: ssh -p 9222 '-oConnectTimeout=30' '-oConnectionAttempts=4' '-oNumberOfPasswordPrompts=0' '-oProtocol=2' '-oServerAliveInterval=15' '-oServerAliveCountMax=8' '-oStrictHostKeyChecking=no' '-oUserKnownHostsFile=/dev/null' '-oIdentitiesOnly=yes' -i /tmp/ssh-tmp92x7ntk1/testing_rsa root@localhost -- true
+14:10:31.414: INFO: (stdout):
+Connection timed out during banner exchange
+
+14:10:31.415: ERROR: Error connecting to device localhost
+14:10:46.430: INFO: run: ssh -p 9222 '-oConnectTimeout=30' '-oConnectionAttempts=4' '-oNumberOfPasswordPrompts=0' '-oProtocol=2' '-oServerAliveInterval=15' '-oServerAliveCountMax=8' '-oStrictHostKeyChecking=no' '-oUserKnownHostsFile=/dev/null' '-oIdentitiesOnly=yes' -i /tmp/ssh-tmp92x7ntk1/testing_rsa root@localhost -- true
+14:11:16.466: INFO: (stdout):
+Connection timed out during banner exchange
+
+14:11:16.467: ERROR: Error connecting to device localhost
+14:11:16.467: ERROR: WaitForBoot timed out trying to connect to the device.
+14:11:16.467: WARNING: Error when launching VM. Retrying...
+14:11:16.467: INFO: run: kill -9 274067
+14:11:16.522: INFO: SSH port 9222 in use...
+14:11:21.527: INFO: run: /mnt/host/source/chroot/usr/libexec/qemu/bin/qemu-system-x86_64 -m 8G -smp 8 -vga virtio -daemonize -pidfile /tmp/cros_vm_9222/kvm.pid -chardev 'pipe,id=control_pipe,path=/tmp/cros_vm_9222/kvm.monitor' -serial file:/tmp/cros_vm_9222/kvm.monitor.serial -mon 'chardev=control_pipe' -cpu 'SandyBridge,-invpcid,-tsc-deadline,check,vmx=on' -usb -device usb-tablet -device 'virtio-net,netdev=eth0' -device 'virtio-scsi-pci,id=scsi' -device virtio-rng -device 'scsi-hd,drive=hd' -drive 'if=none,id=hd,file=/mnt/host/source/src/build/images/kukui/R94-14142.0.2021_08_09_1307-a1/chromiumos_image.bin,cache=unsafe,format=raw' -netdev 'user,id=eth0,net=10.0.2.0/27,hostfwd=tcp:127.0.0.1:9222-:22' -enable-kvm
+VNC server running on ::1:5900
+14:11:21.588: INFO: run: ssh -p 9222 '-oConnectTimeout=30' '-oConnectionAttempts=4' '-oNumberOfPasswordPrompts=0' '-oProtocol=2' '-oServerAliveInterval=15' '-oServerAliveCountMax=8' '-oStrictHostKeyChecking=no' '-oUserKnownHostsFile=/dev/null' '-oIdentitiesOnly=yes' -i /tmp/ssh-tmp92x7ntk1/testing_rsa root@localhost -- true
+14:11:51.622: INFO: (stdout):
+Connection timed out during banner exchange
+
+14:11:51.623: ERROR: Error connecting to device localhost
+14:11:56.626: INFO: run: ssh -p 9222 '-oConnectTimeout=30' '-oConnectionAttempts=4' '-oNumberOfPasswordPrompts=0' '-oProtocol=2' '-oServerAliveInterval=15' '-oServerAliveCountMax=8' '-oStrictHostKeyChecking=no' '-oUserKnownHostsFile=/dev/null' '-oIdentitiesOnly=yes' -i /tmp/ssh-tmp92x7ntk1/testing_rsa root@localhost -- true
+14:12:26.662: INFO: (stdout):
+Connection timed out during banner exchange
+
+14:12:26.663: ERROR: Error connecting to device localhost
+14:12:36.670: INFO: run: ssh -p 9222 '-oConnectTimeout=30' '-oConnectionAttempts=4' '-oNumberOfPasswordPrompts=0' '-oProtocol=2' '-oServerAliveInterval=15' '-oServerAliveCountMax=8' '-oStrictHostKeyChecking=no' '-oUserKnownHostsFile=/dev/null' '-oIdentitiesOnly=yes' -i /tmp/ssh-tmp92x7ntk1/testing_rsa root@localhost -- true
+14:13:06.705: INFO: (stdout):
+Connection timed out during banner exchange
+
+14:13:06.705: ERROR: Error connecting to device localhost
+14:13:21.718: INFO: run: ssh -p 9222 '-oConnectTimeout=30' '-oConnectionAttempts=4' '-oNumberOfPasswordPrompts=0' '-oProtocol=2' '-oServerAliveInterval=15' '-oServerAliveCountMax=8' '-oStrictHostKeyChecking=no' '-oUserKnownHostsFile=/dev/null' '-oIdentitiesOnly=yes' -i /tmp/ssh-tmp92x7ntk1/testing_rsa root@localhost -- true
+14:13:51.755: INFO: (stdout):
+Connection timed out during banner exchange
+
+14:13:51.755: ERROR: Error connecting to device localhost
+14:13:51.755: ERROR: WaitForBoot timed out trying to connect to the device.
+cros_vm: Unhandled exception:
+Traceback (most recent call last):
+  File "/mnt/host/source/chromite/lib/remote_access.py", line 412, in RemoteSh
+    return cros_build_lib.run(ssh_cmd, **kwargs)
+  File "/mnt/host/source/chromite/lib/cros_build_lib.py", line 921, in run
+    raise RunCommandError(msg, cmd_result)
+chromite.lib.cros_build_lib.RunCommandError: return code: 255; command: ssh -p 9222 '-oConnectTimeout=30' '-oConnectionAttempts=4' '-oNumberOfPasswordPrompts=0' '-oProtocol=2' '-oServerAliveInterval=15' '-oServerAliveCountMax=8' '-oStrictHostKeyChecking=no' '-oUserKnownHostsFile=/dev/null' '-oIdentitiesOnly=yes' -i /tmp/ssh-tmp92x7ntk1/testing_rsa root@localhost -- true
+Connection timed out during banner exchange
+
+cmd=['ssh', '-p', '9222', '-oConnectTimeout=30', '-oConnectionAttempts=4', '-oNumberOfPasswordPrompts=0', '-oProtocol=2', '-oServerAliveInterval=15', '-oServerAliveCountMax=8', '-oStrictHostKeyChecking=no', '-oUserKnownHostsFile=/dev/null', '-oIdentitiesOnly=yes', '-i', '/tmp/ssh-tmp92x7ntk1/testing_rsa', 'root@localhost', '--', 'true'], extra env={'LC_MESSAGES': 'C'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/host/source/chromite/lib/device.py", line 73, in WaitForBoot
+    sleep=sleep)
+  File "/mnt/host/source/chromite/lib/retry_util.py", line 278, in RetryException
+    return _run()
+  File "/mnt/host/source/chromite/lib/retry_util.py", line 220, in _Wrapper
+    raise exc_info[1].with_traceback(exc_info[2])
+  File "/mnt/host/source/chromite/lib/retry_util.py", line 183, in _Wrapper
+    ret = func(*args, **kwargs)
+  File "/mnt/host/source/chromite/lib/retry_util.py", line 277, in _run
+    return functor(*args, **kwargs)
+  File "/mnt/host/source/chromite/lib/device.py", line 72, in <lambda>
+    functor=lambda: self.remote_run(cmd=['true']),
+  File "/mnt/host/source/chromite/lib/device.py", line 99, in remote_run
+    debug_level=logging.INFO, **kwargs)
+  File "/mnt/host/source/chromite/lib/remote_access.py", line 1451, in run
+    return super().run(cmd, **kwargs)
+  File "/mnt/host/source/chromite/lib/remote_access.py", line 1226, in run
+    return self.BaseRunCommand(cmd, **kwargs)
+  File "/mnt/host/source/chromite/lib/remote_access.py", line 1150, in BaseRunCommand
+    return self.base_run(cmd, **kwargs)
+  File "/mnt/host/source/chromite/lib/remote_access.py", line 1163, in base_run
+    return self.GetAgent().RemoteSh(cmd, **kwargs)
+  File "/mnt/host/source/chromite/lib/remote_access.py", line 419, in RemoteSh
+    raise SSHConnectionError(e.result.error)
+chromite.lib.remote_access.SSHConnectionError: None
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/host/source/chromite/bin/cros_vm", line 208, in <module>
+    DoMain()
+  File "/mnt/host/source/chromite/bin/cros_vm", line 204, in DoMain
+    commandline.ScriptWrapperMain(FindTarget)
+  File "/mnt/host/source/chromite/lib/commandline.py", line 1037, in ScriptWrapperMain
+    ret = target(argv[1:])
+  File "/mnt/host/source/chromite/scripts/cros_vm.py", line 14, in main
+    vm.VM(opts).Run()
+  File "/mnt/host/source/chromite/lib/vm.py", line 401, in Run
+    self.Start()
+  File "/mnt/host/source/chromite/lib/vm.py", line 505, in Start
+    self.WaitForBoot()
+  File "/mnt/host/source/chromite/lib/vm.py", line 654, in WaitForBoot
+    super().WaitForBoot(sleep=sleep, max_retry=max_retry)
+  File "/mnt/host/source/chromite/lib/device.py", line 76, in WaitForBoot
+    'WaitForBoot timed out trying to connect to the device.')
+chromite.lib.device.DeviceError
