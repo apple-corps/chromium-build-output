@@ -1,0 +1,655 @@
+03:27:00.871: INFO: Updating chroot.
+03:27:00.872: INFO: run: /mnt/host/source/src/scripts/update_chroot --toolchain_boards kukui --usepkg
+03:27:01 INFO    : Updating chroot
+03:27:01 INFO    : Clearing shadow utils lockfiles under /
+03:27:01 INFO    : Updating cross-compilers
+03:27:01 INFO    : Running: sudo -E /mnt/host/source/chromite/bin/cros_setup_toolchains --targets=boards --include-boards=kukui
+03:27:02.303: INFO: The following targets need to be re-initialized:
+03:27:02.303: INFO: {'armv7a-cros-linux-gnueabihf': {'sdk': True, 'crossdev': '', 'default': True}, 'aarch64-cros-linux-gnu': {'sdk': True, 'crossdev': '', 'default': False}, 'arm-none-eabi': {'sdk': True, 'crossdev': '', 'default': False}}
+03:27:02.304: INFO: run: crossdev --show-fail-log --env 'FEATURES=splitdebug' -P --oneshot -P --getbinpkg -P --usepkgonly --without-headers --overlays '/usr/local/portage/chromiumos /usr/local/portage/eclass-overlay /usr/local/portage/stable' --ov-output /usr/local/portage/crossdev -t armv7a-cros-linux-gnueabihf --ex-pkg sys-libs/compiler-rt --ex-pkg sys-libs/libcxxabi --ex-pkg sys-libs/libcxx --ex-pkg sys-libs/llvm-libunwind --ex-pkg dev-lang/go --binutils '[stable]' --gcc '[stable]' --kernel '[stable]' --libc '[stable]' --ex-gdb
+---------------------------------------------------------------------------------------------------------------------
+ [m[1m[32m*[m crossdev version:      20160602
+ [m[1m[32m*[m Host Portage ARCH:     amd64
+ [m[1m[32m*[m Target Portage ARCH:   arm
+ [m[1m[32m*[m Target System:         armv7a-cros-linux-gnueabihf
+ [m[1m[32m*[m Stage:                 4 (C/C++ compiler)
+ [m[1m[32m*[m ABIs:                  default
+
+ [m[1m[32m*[m binutils:              binutils-[stable]
+ [m[1m[32m*[m gcc:                   gcc-[stable]
+ [m[1m[32m*[m headers:               linux-headers-[stable]
+ [m[1m[32m*[m libc:                  glibc-[stable]
+ [m[1m[32m*[m Extra: gdb:            DO IT
+ [m[1m[32m*[m Extra:                 sys-libs/compiler-rt sys-libs/libcxxabi sys-libs/libcxx sys-libs/llvm-libunwind dev-lang/go
+
+ [m[1m[32m*[m CROSSDEV_OVERLAY:      /usr/local/portage/crossdev
+ [m[1m[32m*[m PORT_LOGDIR:           /var/log/portage
+ [m[1m[32m*[m PORTAGE_CONFIGROOT:    
+ [m[1m[32m*[m Portage flags:          --oneshot --getbinpkg --usepkgonly
+  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~
+ [m[1m[32m*[m getting sys-devel/binutils from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-devel/gcc from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-kernel/linux-headers from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-libs/glibc from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-devel/gdb from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-libs/compiler-rt from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-libs/libcxxabi from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-libs/libcxx from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-libs/llvm-libunwind from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting dev-lang/go from /usr/local/portage/chromiumos
+ [m[1m[32m*[m enabling thin-manifests due to /usr/local/portage/chromiumos
+  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~
+ [m[1m[32m*[m Log: /var/log/portage/cross-armv7a-cros-linux-gnueabihf-binutils.log
+ [m[1m[32m*[m Emerging cross-binutils ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-armv7a-cros-linux-gnueabihf-gcc-stage1.log
+ [m[1m[32m*[m Emerging cross-gcc-stage1 ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-armv7a-cros-linux-gnueabihf-linux-headers.log
+ [m[1m[32m*[m Emerging cross-linux-headers ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-armv7a-cros-linux-gnueabihf-glibc.log
+ [m[1m[32m*[m Emerging cross-glibc ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-armv7a-cros-linux-gnueabihf-gcc-stage2.log
+ [m[1m[32m*[m Emerging cross-gcc-stage2 ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-armv7a-cros-linux-gnueabihf-gdb.log
+ [m[1m[32m*[m Emerging cross-gdb ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-armv7a-cros-linux-gnueabihf-compiler-rt.log
+ [m[1m[32m*[m Emerging cross-compiler-rt ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-armv7a-cros-linux-gnueabihf-libcxxabi.log
+ [m[1m[32m*[m Emerging cross-libcxxabi ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-armv7a-cros-linux-gnueabihf-libcxx.log
+ [m[1m[32m*[m Emerging cross-libcxx ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-armv7a-cros-linux-gnueabihf-llvm-libunwind.log
+ [m[1m[32m*[m Emerging cross-llvm-libunwind ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-armv7a-cros-linux-gnueabihf-go.log
+ [m[1m[32m*[m Emerging cross-go ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+03:30:37.066: INFO: run: crossdev --show-fail-log --env 'FEATURES=splitdebug' -P --oneshot -P --getbinpkg -P --usepkgonly --without-headers --overlays '/usr/local/portage/chromiumos /usr/local/portage/eclass-overlay /usr/local/portage/stable' --ov-output /usr/local/portage/crossdev -t arm-none-eabi --binutils '[stable]' --gcc '[stable]' --libc '[stable]' --ex-gdb
+---------------------------------------------------------------------------------------------------------------------
+ [m[1m[32m*[m crossdev version:      20160602
+ [m[1m[32m*[m Host Portage ARCH:     amd64
+ [m[1m[32m*[m Target Portage ARCH:   arm
+ [m[1m[32m*[m Target System:         arm-none-eabi
+ [m[1m[32m*[m Stage:                 3 (C compiler & libc)
+ [m[1m[32m*[m ABIs:                  default
+
+ [m[1m[32m*[m binutils:              binutils-[stable]
+ [m[1m[32m*[m gcc:                   gcc-[stable]
+ [m[1m[32m*[m libc:                  newlib-[stable]
+ [m[1m[32m*[m Extra: gdb:            DO IT
+
+ [m[1m[32m*[m CROSSDEV_OVERLAY:      /usr/local/portage/crossdev
+ [m[1m[32m*[m PORT_LOGDIR:           /var/log/portage
+ [m[1m[32m*[m PORTAGE_CONFIGROOT:    
+ [m[1m[32m*[m Portage flags:          --oneshot --getbinpkg --usepkgonly
+  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~
+ [m[1m[32m*[m getting sys-devel/binutils from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-devel/gcc from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-libs/newlib from /usr/local/portage/stable
+ [m[1m[32m*[m getting sys-devel/gdb from /usr/local/portage/chromiumos
+ [m[1m[32m*[m enabling thin-manifests due to /usr/local/portage/chromiumos
+  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~
+!!! WARNING - Cannot auto-configure CHOST arm-none-eabi;
+!!! You should edit /usr/arm-none-eabi/etc/portage/make.conf
+!!! by hand to complete your configuration.
+!!!  No LIBC is known for this target.
+ [m[1m[32m*[m Log: /var/log/portage/cross-arm-none-eabi-binutils.log
+ [m[1m[32m*[m Emerging cross-binutils ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-arm-none-eabi-gcc-stage1.log
+ [m[1m[32m*[m Emerging cross-gcc-stage1 ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-arm-none-eabi-newlib.log
+ [m[1m[32m*[m Emerging cross-newlib ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-arm-none-eabi-gdb.log
+ [m[1m[32m*[m Emerging cross-gdb ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+03:31:47.714: INFO: run: crossdev --show-fail-log --env 'FEATURES=splitdebug' -P --oneshot -P --getbinpkg -P --usepkgonly --without-headers --overlays '/usr/local/portage/chromiumos /usr/local/portage/eclass-overlay /usr/local/portage/stable' --ov-output /usr/local/portage/crossdev -t aarch64-cros-linux-gnu --ex-pkg sys-libs/compiler-rt --ex-pkg sys-libs/libcxxabi --ex-pkg sys-libs/libcxx --ex-pkg sys-libs/llvm-libunwind --ex-pkg dev-lang/go --binutils '[stable]' --gcc '[stable]' --kernel '[stable]' --libc '[stable]' --ex-gdb
+---------------------------------------------------------------------------------------------------------------------
+ [m[1m[32m*[m crossdev version:      20160602
+ [m[1m[32m*[m Host Portage ARCH:     amd64
+ [m[1m[32m*[m Target Portage ARCH:   arm64
+ [m[1m[32m*[m Target System:         aarch64-cros-linux-gnu
+ [m[1m[32m*[m Stage:                 4 (C/C++ compiler)
+ [m[1m[32m*[m ABIs:                  arm64
+
+ [m[1m[32m*[m binutils:              binutils-[stable]
+ [m[1m[32m*[m gcc:                   gcc-[stable]
+ [m[1m[32m*[m headers:               linux-headers-[stable]
+ [m[1m[32m*[m libc:                  glibc-[stable]
+ [m[1m[32m*[m Extra: gdb:            DO IT
+ [m[1m[32m*[m Extra:                 sys-libs/compiler-rt sys-libs/libcxxabi sys-libs/libcxx sys-libs/llvm-libunwind dev-lang/go
+
+ [m[1m[32m*[m CROSSDEV_OVERLAY:      /usr/local/portage/crossdev
+ [m[1m[32m*[m PORT_LOGDIR:           /var/log/portage
+ [m[1m[32m*[m PORTAGE_CONFIGROOT:    
+ [m[1m[32m*[m Portage flags:          --oneshot --getbinpkg --usepkgonly
+  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~
+ [m[1m[32m*[m getting sys-devel/binutils from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-devel/gcc from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-kernel/linux-headers from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-libs/glibc from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-devel/gdb from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-libs/compiler-rt from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-libs/libcxxabi from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-libs/libcxx from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting sys-libs/llvm-libunwind from /usr/local/portage/chromiumos
+ [m[1m[32m*[m getting dev-lang/go from /usr/local/portage/chromiumos
+ [m[1m[32m*[m enabling thin-manifests due to /usr/local/portage/chromiumos
+  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~  -  _  -  ~
+ [m[1m[32m*[m Log: /var/log/portage/cross-aarch64-cros-linux-gnu-binutils.log
+ [m[1m[32m*[m Emerging cross-binutils ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-aarch64-cros-linux-gnu-gcc-stage1.log
+ [m[1m[32m*[m Emerging cross-gcc-stage1 ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-aarch64-cros-linux-gnu-linux-headers.log
+ [m[1m[32m*[m Emerging cross-linux-headers ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-aarch64-cros-linux-gnu-glibc.log
+ [m[1m[32m*[m Emerging cross-glibc ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-aarch64-cros-linux-gnu-gcc-stage2.log
+ [m[1m[32m*[m Emerging cross-gcc-stage2 ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-aarch64-cros-linux-gnu-gdb.log
+ [m[1m[32m*[m Emerging cross-gdb ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-aarch64-cros-linux-gnu-compiler-rt.log
+ [m[1m[32m*[m Emerging cross-compiler-rt ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-aarch64-cros-linux-gnu-libcxxabi.log
+ [m[1m[32m*[m Emerging cross-libcxxabi ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-aarch64-cros-linux-gnu-libcxx.log
+ [m[1m[32m*[m Emerging cross-libcxx ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-aarch64-cros-linux-gnu-llvm-libunwind.log
+ [m[1m[32m*[m Emerging cross-llvm-libunwind ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+ [m[1m[32m*[m Log: /var/log/portage/cross-aarch64-cros-linux-gnu-go.log
+ [m[1m[32m*[m Emerging cross-go ...
+[A[109C  [m[1m[34m[ [m[1m[32mok[m[1m[34m ][m
+03:35:23.555: INFO: Determining required toolchain updates...
+
+!!! 'cross-armv7a-cros-linux-gnueabihf/compiler-rt' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-armv7a-cros-linux-gnueabihf/libcxxabi' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-armv7a-cros-linux-gnueabihf/libcxx' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-armv7a-cros-linux-gnueabihf/llvm-libunwind' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-armv7a-cros-linux-gnueabihf/go' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-armv7a-cros-linux-gnueabihf/binutils' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-armv7a-cros-linux-gnueabihf/gcc' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-armv7a-cros-linux-gnueabihf/linux-headers' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-armv7a-cros-linux-gnueabihf/glibc' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-armv7a-cros-linux-gnueabihf/gdb' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-aarch64-cros-linux-gnu/compiler-rt' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-aarch64-cros-linux-gnu/libcxxabi' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-aarch64-cros-linux-gnu/libcxx' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-aarch64-cros-linux-gnu/llvm-libunwind' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-aarch64-cros-linux-gnu/go' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-aarch64-cros-linux-gnu/binutils' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-aarch64-cros-linux-gnu/gcc' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-aarch64-cros-linux-gnu/linux-headers' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-aarch64-cros-linux-gnu/glibc' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-aarch64-cros-linux-gnu/gdb' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-arm-none-eabi/binutils' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-arm-none-eabi/gcc' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-arm-none-eabi/newlib' has a category that is not listed in /etc/portage/categories
+
+!!! 'cross-arm-none-eabi/gdb' has a category that is not listed in /etc/portage/categories
+03:35:23.836: INFO: Updating packages:
+03:35:23.836: INFO: ['cross-armv7a-cros-linux-gnueabihf/compiler-rt', 'cross-armv7a-cros-linux-gnueabihf/libcxxabi', 'cross-armv7a-cros-linux-gnueabihf/libcxx', 'cross-armv7a-cros-linux-gnueabihf/llvm-libunwind', 'cross-armv7a-cros-linux-gnueabihf/go', 'cross-armv7a-cros-linux-gnueabihf/binutils', 'cross-armv7a-cros-linux-gnueabihf/gcc', 'cross-armv7a-cros-linux-gnueabihf/linux-headers', 'cross-armv7a-cros-linux-gnueabihf/glibc', 'cross-armv7a-cros-linux-gnueabihf/gdb', 'dev-lang/rust', 'cross-aarch64-cros-linux-gnu/compiler-rt', 'cross-aarch64-cros-linux-gnu/libcxxabi', 'cross-aarch64-cros-linux-gnu/libcxx', 'cross-aarch64-cros-linux-gnu/llvm-libunwind', 'cross-aarch64-cros-linux-gnu/go', 'cross-aarch64-cros-linux-gnu/binutils', 'cross-aarch64-cros-linux-gnu/gcc', 'cross-aarch64-cros-linux-gnu/linux-headers', 'cross-aarch64-cros-linux-gnu/glibc', 'cross-aarch64-cros-linux-gnu/gdb', 'cross-arm-none-eabi/binutils', 'cross-arm-none-eabi/gcc', 'cross-arm-none-eabi/newlib', 'cross-arm-none-eabi/gdb', 'dev-lang/rust-bootstrap', 'virtual/target-sdk-post-cross', 'dev-embedded/coreboot-sdk', 'dev-embedded/ti50-sdk']
+03:35:23.837: INFO: run: /mnt/host/source/chromite/bin/parallel_emerge --oneshot --update --getbinpkg --usepkgonly cross-armv7a-cros-linux-gnueabihf/compiler-rt cross-armv7a-cros-linux-gnueabihf/libcxxabi cross-armv7a-cros-linux-gnueabihf/libcxx cross-armv7a-cros-linux-gnueabihf/llvm-libunwind cross-armv7a-cros-linux-gnueabihf/go cross-armv7a-cros-linux-gnueabihf/binutils cross-armv7a-cros-linux-gnueabihf/gcc cross-armv7a-cros-linux-gnueabihf/linux-headers cross-armv7a-cros-linux-gnueabihf/glibc cross-armv7a-cros-linux-gnueabihf/gdb dev-lang/rust cross-aarch64-cros-linux-gnu/compiler-rt cross-aarch64-cros-linux-gnu/libcxxabi cross-aarch64-cros-linux-gnu/libcxx cross-aarch64-cros-linux-gnu/llvm-libunwind cross-aarch64-cros-linux-gnu/go cross-aarch64-cros-linux-gnu/binutils cross-aarch64-cros-linux-gnu/gcc cross-aarch64-cros-linux-gnu/linux-headers cross-aarch64-cros-linux-gnu/glibc cross-aarch64-cros-linux-gnu/gdb cross-arm-none-eabi/binutils cross-arm-none-eabi/gcc cross-arm-none-eabi/newlib cross-arm-none-eabi/gdb dev-lang/rust-bootstrap virtual/target-sdk-post-cross dev-embedded/coreboot-sdk dev-embedded/ti50-sdk
+Calculating dependencies  ... done!
+>>> 03:35:28 Jobs: 0 of 39 complete, 1 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Emerging binary (1 of 39) dev-rust/unicode-xid-0.2.2::chromiumos
+>>> 03:35:28 Jobs: 0 of 39 complete, 1 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Jobs: 0 of 39 complete, 2 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Emerging binary (2 of 39) dev-rust/rustc-std-workspace-core-1.0.0::chromiumos
+>>> 03:35:28 Jobs: 0 of 39 complete, 2 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Jobs: 0 of 39 complete, 3 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Emerging binary (3 of 39) dev-lang/rust-1.51.0::chromiumos
+>>> 03:35:28 Jobs: 0 of 39 complete, 3 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Jobs: 0 of 39 complete, 4 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Emerging binary (4 of 39) dev-embedded/coreboot-sdk-0.0.1-r110::chromiumos
+>>> 03:35:28 Jobs: 0 of 39 complete, 4 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Jobs: 0 of 39 complete, 5 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Emerging binary (5 of 39) dev-embedded/ti50-sdk-0.0.2-r1::chromiumos
+>>> 03:35:28 Jobs: 0 of 39 complete, 5 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Jobs: 0 of 39 complete, 6 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Emerging binary (6 of 39) dev-rust/bindgen-0.56.0-r2::chromiumos
+>>> 03:35:28 Jobs: 0 of 39 complete, 6 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Jobs: 0 of 39 complete, 7 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Emerging binary (7 of 39) sys-apps/ripgrep-12.1.1::chromiumos
+>>> 03:35:28 Jobs: 0 of 39 complete, 7 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Jobs: 0 of 39 complete, 8 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:28 Emerging binary (8 of 39) dev-util/cmocka-1.1.5::portage-stable
+>>> 03:35:28 Jobs: 0 of 39 complete, 8 running               Load avg: 1.49, 1.07, 1.61
+>>> 03:35:32 Installing (2 of 39) dev-rust/rustc-std-workspace-core-1.0.0::chromiumos
+>>> 03:35:32 Jobs: 0 of 39 complete, 8 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:32 Jobs: 0 of 39 complete, 7 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:32 Jobs: 0 of 39 complete, 8 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:32 Emerging binary (9 of 39) dev-rust/termcolor-1.1.2::chromiumos
+>>> 03:35:32 Jobs: 0 of 39 complete, 8 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:32 Installing (8 of 39) dev-util/cmocka-1.1.5::portage-stable
+>>> 03:35:32 Jobs: 0 of 39 complete, 8 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:32 Jobs: 0 of 39 complete, 7 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:32 Jobs: 0 of 39 complete, 8 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:32 Emerging binary (10 of 39) dev-rust/compiler_builtins-0.1.2::chromiumos
+>>> 03:35:32 Jobs: 0 of 39 complete, 8 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:32 Installing (1 of 39) dev-rust/unicode-xid-0.2.2::chromiumos
+>>> 03:35:32 Jobs: 0 of 39 complete, 8 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:32 Jobs: 0 of 39 complete, 7 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:32 Jobs: 0 of 39 complete, 8 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:32 Emerging binary (11 of 39) dev-rust/rustc-std-workspace-std-1.0.0::chromiumos
+>>> 03:35:32 Jobs: 0 of 39 complete, 8 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:34 Installing (6 of 39) dev-rust/bindgen-0.56.0-r2::chromiumos
+>>> 03:35:34 Jobs: 0 of 39 complete, 8 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:34 Jobs: 0 of 39 complete, 7 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:34 Jobs: 0 of 39 complete, 8 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:34 Emerging binary (12 of 39) dev-rust/bitflags-1.2.1::chromiumos
+>>> 03:35:34 Jobs: 0 of 39 complete, 8 running               Load avg: 1.77, 1.14, 1.63
+>>> 03:35:38 Installing (10 of 39) dev-rust/compiler_builtins-0.1.2::chromiumos
+>>> 03:35:38 Jobs: 0 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:38 Jobs: 0 of 39 complete, 7 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:38 Jobs: 0 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:38 Emerging binary (13 of 39) dev-rust/clippy-0.0.166::chromiumos
+>>> 03:35:38 Jobs: 0 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:38 Installing (7 of 39) sys-apps/ripgrep-12.1.1::chromiumos
+>>> 03:35:38 Jobs: 0 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:38 Jobs: 0 of 39 complete, 7 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:38 Jobs: 0 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:38 Emerging binary (14 of 39) dev-rust/strsim-0.8.0-r1::chromiumos
+>>> 03:35:38 Jobs: 0 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:38 Completed (2 of 39) dev-rust/rustc-std-workspace-core-1.0.0::chromiumos
+>>> 03:35:38 Jobs: 0 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:38 Jobs: 1 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:39 Completed (1 of 39) dev-rust/unicode-xid-0.2.2::chromiumos
+>>> 03:35:39 Jobs: 1 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:39 Jobs: 2 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:40 Completed (8 of 39) dev-util/cmocka-1.1.5::portage-stable
+>>> 03:35:40 Jobs: 2 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:40 Jobs: 3 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:41 Completed (6 of 39) dev-rust/bindgen-0.56.0-r2::chromiumos
+>>> 03:35:41 Jobs: 3 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:41 Jobs: 4 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:41 Installing (9 of 39) dev-rust/termcolor-1.1.2::chromiumos
+>>> 03:35:41 Jobs: 4 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:41 Jobs: 4 of 39 complete, 7 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:41 Jobs: 4 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:41 Emerging binary (15 of 39) dev-rust/term_size-0.3.0::chromiumos
+>>> 03:35:41 Jobs: 4 of 39 complete, 8 running               Load avg: 1.79, 1.15, 1.63
+>>> 03:35:44 Completed (7 of 39) sys-apps/ripgrep-12.1.1::chromiumos
+>>> 03:35:44 Jobs: 4 of 39 complete, 8 running               Load avg: 1.97, 1.20, 1.64
+>>> 03:35:44 Jobs: 5 of 39 complete, 8 running               Load avg: 1.97, 1.20, 1.64
+>>> 03:35:45 Completed (10 of 39) dev-rust/compiler_builtins-0.1.2::chromiumos
+>>> 03:35:45 Jobs: 5 of 39 complete, 8 running               Load avg: 1.97, 1.20, 1.64
+>>> 03:35:45 Jobs: 6 of 39 complete, 8 running               Load avg: 1.97, 1.20, 1.64
+>>> 03:35:45 Completed (9 of 39) dev-rust/termcolor-1.1.2::chromiumos
+>>> 03:35:45 Jobs: 6 of 39 complete, 8 running               Load avg: 1.97, 1.20, 1.64
+>>> 03:35:45 Jobs: 7 of 39 complete, 8 running               Load avg: 1.97, 1.20, 1.64
+>>> 03:35:48 Installing (11 of 39) dev-rust/rustc-std-workspace-std-1.0.0::chromiumos
+>>> 03:35:48 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:48 Jobs: 7 of 39 complete, 7 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:48 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:48 Emerging binary (16 of 39) dev-rust/textwrap-0.11.0::chromiumos
+>>> 03:35:48 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:48 Installing (12 of 39) dev-rust/bitflags-1.2.1::chromiumos
+>>> 03:35:48 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:48 Jobs: 7 of 39 complete, 7 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:48 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:48 Emerging binary (17 of 39) dev-rust/yaml-rust-0.3.5::chromiumos
+>>> 03:35:48 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:49 Installing (15 of 39) dev-rust/term_size-0.3.0::chromiumos
+>>> 03:35:49 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:49 Jobs: 7 of 39 complete, 7 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:49 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:49 Emerging binary (18 of 39) dev-rust/ansi_term-0.11.0-r1::chromiumos
+>>> 03:35:49 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:49 Installing (13 of 39) dev-rust/clippy-0.0.166::chromiumos
+>>> 03:35:49 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:49 Jobs: 7 of 39 complete, 7 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:49 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:49 Emerging binary (19 of 39) dev-rust/bytes-0.5.6::chromiumos
+>>> 03:35:49 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:50 Installing (14 of 39) dev-rust/strsim-0.8.0-r1::chromiumos
+>>> 03:35:50 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:50 Jobs: 7 of 39 complete, 7 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:50 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:50 Emerging binary (20 of 39) dev-rust/proc-macro2-1.0.26-r1::chromiumos
+>>> 03:35:50 Jobs: 7 of 39 complete, 8 running               Load avg: 2.13, 1.25, 1.66
+>>> 03:35:55 Completed (11 of 39) dev-rust/rustc-std-workspace-std-1.0.0::chromiumos
+>>> 03:35:55 Jobs: 7 of 39 complete, 8 running               Load avg: 2.52, 1.34, 1.68
+>>> 03:35:55 Jobs: 8 of 39 complete, 8 running               Load avg: 2.52, 1.34, 1.68
+>>> 03:35:56 Completed (15 of 39) dev-rust/term_size-0.3.0::chromiumos
+>>> 03:35:56 Jobs: 8 of 39 complete, 8 running               Load avg: 2.52, 1.34, 1.68
+>>> 03:35:56 Jobs: 9 of 39 complete, 8 running               Load avg: 2.52, 1.34, 1.68
+>>> 03:35:56 Completed (12 of 39) dev-rust/bitflags-1.2.1::chromiumos
+>>> 03:35:56 Jobs: 9 of 39 complete, 8 running               Load avg: 2.48, 1.36, 1.69
+>>> 03:35:56 Jobs: 10 of 39 complete, 8 running              Load avg: 2.48, 1.36, 1.69
+>>> 03:35:57 Completed (13 of 39) dev-rust/clippy-0.0.166::chromiumos
+>>> 03:35:57 Jobs: 10 of 39 complete, 8 running              Load avg: 2.48, 1.36, 1.69
+>>> 03:35:57 Jobs: 11 of 39 complete, 8 running              Load avg: 2.48, 1.36, 1.69
+>>> 03:35:58 Completed (14 of 39) dev-rust/strsim-0.8.0-r1::chromiumos
+>>> 03:35:58 Jobs: 11 of 39 complete, 8 running              Load avg: 2.48, 1.36, 1.69
+>>> 03:35:58 Jobs: 12 of 39 complete, 8 running              Load avg: 2.48, 1.36, 1.69
+>>> 03:35:58 Installing (18 of 39) dev-rust/ansi_term-0.11.0-r1::chromiumos
+>>> 03:35:58 Jobs: 12 of 39 complete, 8 running              Load avg: 2.48, 1.36, 1.69
+>>> 03:35:59 Jobs: 12 of 39 complete, 7 running              Load avg: 2.48, 1.36, 1.69
+>>> 03:35:59 Jobs: 12 of 39 complete, 8 running              Load avg: 2.48, 1.36, 1.69
+>>> 03:35:59 Emerging binary (21 of 39) dev-rust/unicode-width-0.1.8::chromiumos
+>>> 03:35:59 Jobs: 12 of 39 complete, 8 running              Load avg: 2.48, 1.36, 1.69
+>>> 03:35:59 Installing (16 of 39) dev-rust/textwrap-0.11.0::chromiumos
+>>> 03:35:59 Jobs: 12 of 39 complete, 8 running              Load avg: 2.48, 1.36, 1.69
+>>> 03:35:59 Jobs: 12 of 39 complete, 7 running              Load avg: 2.48, 1.36, 1.69
+>>> 03:35:59 Jobs: 12 of 39 complete, 8 running              Load avg: 2.48, 1.36, 1.69
+>>> 03:35:59 Emerging binary (22 of 39) net-libs/libssh2-1.8.0-r1::portage-stable
+>>> 03:35:59 Jobs: 12 of 39 complete, 8 running              Load avg: 2.48, 1.36, 1.69
+>>> 03:36:03 Completed (18 of 39) dev-rust/ansi_term-0.11.0-r1::chromiumos
+>>> 03:36:03 Jobs: 12 of 39 complete, 8 running              Load avg: 2.44, 1.37, 1.69
+>>> 03:36:03 Jobs: 13 of 39 complete, 8 running              Load avg: 2.44, 1.37, 1.69
+>>> 03:36:03 Completed (16 of 39) dev-rust/textwrap-0.11.0::chromiumos
+>>> 03:36:03 Jobs: 13 of 39 complete, 8 running              Load avg: 2.44, 1.37, 1.69
+>>> 03:36:03 Jobs: 14 of 39 complete, 8 running              Load avg: 2.44, 1.37, 1.69
+>>> 03:36:04 Installing (19 of 39) dev-rust/bytes-0.5.6::chromiumos
+>>> 03:36:04 Jobs: 14 of 39 complete, 8 running              Load avg: 2.44, 1.37, 1.69
+>>> 03:36:04 Jobs: 14 of 39 complete, 7 running              Load avg: 2.44, 1.37, 1.69
+>>> 03:36:04 Jobs: 14 of 39 complete, 8 running              Load avg: 2.44, 1.37, 1.69
+>>> 03:36:04 Emerging binary (23 of 39) dev-rust/dbus-codegen-0.5.0-r1::chromiumos
+>>> 03:36:04 Jobs: 14 of 39 complete, 8 running              Load avg: 2.44, 1.37, 1.69
+>>> 03:36:06 Installing (21 of 39) dev-rust/unicode-width-0.1.8::chromiumos
+>>> 03:36:06 Jobs: 14 of 39 complete, 8 running              Load avg: 2.44, 1.37, 1.69
+>>> 03:36:06 Jobs: 14 of 39 complete, 7 running              Load avg: 2.44, 1.37, 1.69
+>>> 03:36:06 Jobs: 14 of 39 complete, 8 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:06 Emerging binary (24 of 39) sys-apps/mosys-1.2.3-r1310::chromiumos
+>>> 03:36:06 Jobs: 14 of 39 complete, 8 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:08 Completed (19 of 39) dev-rust/bytes-0.5.6::chromiumos
+>>> 03:36:08 Jobs: 14 of 39 complete, 8 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:08 Jobs: 15 of 39 complete, 8 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:09 Installing (23 of 39) dev-rust/dbus-codegen-0.5.0-r1::chromiumos
+>>> 03:36:09 Jobs: 15 of 39 complete, 8 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:09 Jobs: 15 of 39 complete, 7 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:09 Jobs: 15 of 39 complete, 8 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:09 Emerging binary (25 of 39) dev-rust/libc-0.2.94::chromiumos
+>>> 03:36:09 Jobs: 15 of 39 complete, 8 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:10 Installing (20 of 39) dev-rust/proc-macro2-1.0.26-r1::chromiumos
+>>> 03:36:10 Jobs: 15 of 39 complete, 8 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:10 Jobs: 15 of 39 complete, 7 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:10 Completed (21 of 39) dev-rust/unicode-width-0.1.8::chromiumos
+>>> 03:36:10 Jobs: 15 of 39 complete, 7 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:10 Jobs: 16 of 39 complete, 7 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:11 Installing (22 of 39) net-libs/libssh2-1.8.0-r1::portage-stable
+>>> 03:36:11 Jobs: 16 of 39 complete, 7 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:11 Jobs: 16 of 39 complete, 6 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:11 Installing (17 of 39) dev-rust/yaml-rust-0.3.5::chromiumos
+>>> 03:36:11 Jobs: 16 of 39 complete, 6 running              Load avg: 2.48, 1.39, 1.70
+>>> 03:36:11 Jobs: 16 of 39 complete, 5 running              Load avg: 2.53, 1.42, 1.70
+>>> 03:36:14 Completed (23 of 39) dev-rust/dbus-codegen-0.5.0-r1::chromiumos
+>>> 03:36:14 Jobs: 16 of 39 complete, 5 running              Load avg: 2.53, 1.42, 1.70
+>>> 03:36:14 Jobs: 17 of 39 complete, 5 running              Load avg: 2.53, 1.42, 1.70
+>>> 03:36:16 Completed (20 of 39) dev-rust/proc-macro2-1.0.26-r1::chromiumos
+>>> 03:36:16 Jobs: 17 of 39 complete, 5 running              Load avg: 2.53, 1.42, 1.70
+>>> 03:36:16 Jobs: 18 of 39 complete, 5 running              Load avg: 2.53, 1.42, 1.70
+>>> 03:36:16 Jobs: 18 of 39 complete, 6 running              Load avg: 2.53, 1.42, 1.70
+>>> 03:36:16 Emerging binary (26 of 39) dev-rust/quote-1.0.9::chromiumos
+>>> 03:36:16 Jobs: 18 of 39 complete, 6 running              Load avg: 2.53, 1.42, 1.70
+>>> 03:36:16 Completed (22 of 39) net-libs/libssh2-1.8.0-r1::portage-stable
+>>> 03:36:16 Jobs: 18 of 39 complete, 6 running              Load avg: 2.56, 1.45, 1.71
+>>> 03:36:16 Jobs: 19 of 39 complete, 6 running              Load avg: 2.56, 1.45, 1.71
+>>> 03:36:16 Jobs: 19 of 39 complete, 7 running              Load avg: 2.56, 1.45, 1.71
+>>> 03:36:16 Emerging binary (27 of 39) dev-lang/rust-bootstrap-1.53.0::chromiumos
+>>> 03:36:16 Jobs: 19 of 39 complete, 7 running              Load avg: 2.56, 1.45, 1.71
+>>> 03:36:17 Completed (17 of 39) dev-rust/yaml-rust-0.3.5::chromiumos
+>>> 03:36:17 Jobs: 19 of 39 complete, 7 running              Load avg: 2.56, 1.45, 1.71
+>>> 03:36:17 Jobs: 20 of 39 complete, 7 running              Load avg: 2.56, 1.45, 1.71
+>>> 03:36:19 Installing (26 of 39) dev-rust/quote-1.0.9::chromiumos
+>>> 03:36:19 Jobs: 20 of 39 complete, 7 running              Load avg: 2.56, 1.45, 1.71
+>>> 03:36:19 Jobs: 20 of 39 complete, 6 running              Load avg: 2.56, 1.45, 1.71
+>>> 03:36:23 Completed (26 of 39) dev-rust/quote-1.0.9::chromiumos
+>>> 03:36:23 Jobs: 20 of 39 complete, 6 running              Load avg: 2.52, 1.46, 1.71
+>>> 03:36:23 Jobs: 21 of 39 complete, 6 running              Load avg: 2.52, 1.46, 1.71
+>>> 03:36:23 Jobs: 21 of 39 complete, 7 running              Load avg: 2.52, 1.46, 1.71
+>>> 03:36:23 Emerging binary (28 of 39) dev-rust/syn-1.0.72::chromiumos
+>>> 03:36:23 Jobs: 21 of 39 complete, 7 running              Load avg: 2.52, 1.46, 1.71
+>>> 03:36:30 Installing (25 of 39) dev-rust/libc-0.2.94::chromiumos
+>>> 03:36:30 Jobs: 21 of 39 complete, 7 running              Load avg: 2.32, 1.43, 1.70
+>>> 03:36:30 Jobs: 21 of 39 complete, 6 running              Load avg: 2.32, 1.43, 1.70
+>>> 03:36:34 Completed (25 of 39) dev-rust/libc-0.2.94::chromiumos
+>>> 03:36:34 Jobs: 21 of 39 complete, 6 running              Load avg: 2.29, 1.44, 1.70
+>>> 03:36:34 Jobs: 22 of 39 complete, 6 running              Load avg: 2.29, 1.44, 1.70
+>>> 03:36:34 Jobs: 22 of 39 complete, 7 running              Load avg: 2.29, 1.44, 1.70
+>>> 03:36:34 Emerging binary (29 of 39) dev-rust/atty-0.2.14::chromiumos
+>>> 03:36:34 Jobs: 22 of 39 complete, 7 running              Load avg: 2.29, 1.44, 1.70
+>>> 03:36:37 Installing (29 of 39) dev-rust/atty-0.2.14::chromiumos
+>>> 03:36:37 Jobs: 22 of 39 complete, 7 running              Load avg: 2.11, 1.42, 1.70
+>>> 03:36:38 Jobs: 22 of 39 complete, 6 running              Load avg: 2.11, 1.42, 1.70
+>>> 03:36:39 Installing (28 of 39) dev-rust/syn-1.0.72::chromiumos
+>>> 03:36:39 Jobs: 22 of 39 complete, 6 running              Load avg: 2.11, 1.42, 1.70
+>>> 03:36:39 Jobs: 22 of 39 complete, 5 running              Load avg: 2.11, 1.42, 1.70
+>>> 03:36:41 Completed (29 of 39) dev-rust/atty-0.2.14::chromiumos
+>>> 03:36:41 Jobs: 22 of 39 complete, 5 running              Load avg: 2.10, 1.43, 1.70
+>>> 03:36:41 Jobs: 23 of 39 complete, 5 running              Load avg: 2.10, 1.43, 1.70
+>>> 03:36:44 Completed (28 of 39) dev-rust/syn-1.0.72::chromiumos
+>>> 03:36:44 Jobs: 23 of 39 complete, 5 running              Load avg: 2.10, 1.43, 1.70
+>>> 03:36:44 Jobs: 24 of 39 complete, 5 running              Load avg: 2.10, 1.43, 1.70
+>>> 03:36:44 Jobs: 24 of 39 complete, 6 running              Load avg: 2.10, 1.43, 1.70
+>>> 03:36:44 Emerging binary (30 of 39) dev-rust/serde_derive-1.0.125::chromiumos
+>>> 03:36:44 Jobs: 24 of 39 complete, 6 running              Load avg: 2.10, 1.43, 1.70
+>>> 03:36:44 Installing (24 of 39) sys-apps/mosys-1.2.3-r1310::chromiumos
+>>> 03:36:44 Jobs: 24 of 39 complete, 6 running              Load avg: 2.10, 1.43, 1.70
+>>> 03:36:44 Jobs: 24 of 39 complete, 5 running              Load avg: 2.10, 1.43, 1.70
+>>> 03:36:48 Completed (24 of 39) sys-apps/mosys-1.2.3-r1310::chromiumos
+>>> 03:36:48 Jobs: 24 of 39 complete, 5 running              Load avg: 2.01, 1.42, 1.69
+>>> 03:36:48 Jobs: 25 of 39 complete, 5 running              Load avg: 2.01, 1.42, 1.69
+>>> 03:37:03 Installing (30 of 39) dev-rust/serde_derive-1.0.125::chromiumos
+>>> 03:37:03 Jobs: 25 of 39 complete, 5 running              Load avg: 1.56, 1.35, 1.67
+>>> 03:37:04 Jobs: 25 of 39 complete, 4 running              Load avg: 1.56, 1.35, 1.67
+>>> 03:37:07 Completed (30 of 39) dev-rust/serde_derive-1.0.125::chromiumos
+>>> 03:37:07 Jobs: 25 of 39 complete, 4 running              Load avg: 1.92, 1.43, 1.69
+>>> 03:37:07 Jobs: 26 of 39 complete, 4 running              Load avg: 1.92, 1.43, 1.69
+>>> 03:37:07 Jobs: 26 of 39 complete, 5 running              Load avg: 1.92, 1.43, 1.69
+>>> 03:37:07 Emerging binary (31 of 39) dev-rust/serde-1.0.125::chromiumos
+>>> 03:37:07 Jobs: 26 of 39 complete, 5 running              Load avg: 1.92, 1.43, 1.69
+>>> 03:37:21 Installing (31 of 39) dev-rust/serde-1.0.125::chromiumos
+>>> 03:37:21 Jobs: 26 of 39 complete, 5 running              Load avg: 1.62, 1.38, 1.67
+>>> 03:37:21 Jobs: 26 of 39 complete, 4 running              Load avg: 1.62, 1.38, 1.67
+>>> 03:37:25 Completed (31 of 39) dev-rust/serde-1.0.125::chromiumos
+>>> 03:37:25 Jobs: 26 of 39 complete, 4 running              Load avg: 1.65, 1.39, 1.67
+>>> 03:37:25 Jobs: 27 of 39 complete, 4 running              Load avg: 1.65, 1.39, 1.67
+>>> 03:37:25 Jobs: 27 of 39 complete, 5 running              Load avg: 1.65, 1.39, 1.67
+>>> 03:37:25 Emerging binary (32 of 39) dev-rust/codespan-reporting-0.11.1::chromiumos
+>>> 03:37:25 Jobs: 27 of 39 complete, 5 running              Load avg: 1.65, 1.39, 1.67
+>>> 03:37:25 Jobs: 27 of 39 complete, 6 running              Load avg: 1.65, 1.39, 1.67
+>>> 03:37:25 Emerging binary (33 of 39) dev-rust/vec_map-0.8.2::chromiumos
+>>> 03:37:25 Jobs: 27 of 39 complete, 6 running              Load avg: 1.65, 1.39, 1.67
+>>> 03:37:25 Jobs: 27 of 39 complete, 7 running              Load avg: 1.65, 1.39, 1.67
+>>> 03:37:25 Emerging binary (34 of 39) dev-rust/protobuf-2.24.1::chromiumos
+>>> 03:37:25 Jobs: 27 of 39 complete, 7 running              Load avg: 1.65, 1.39, 1.67
+>>> 03:37:30 Installing (34 of 39) dev-rust/protobuf-2.24.1::chromiumos
+>>> 03:37:30 Jobs: 27 of 39 complete, 7 running              Load avg: 1.68, 1.40, 1.67
+>>> 03:37:30 Jobs: 27 of 39 complete, 6 running              Load avg: 1.68, 1.40, 1.67
+>>> 03:37:34 Completed (34 of 39) dev-rust/protobuf-2.24.1::chromiumos
+>>> 03:37:34 Jobs: 27 of 39 complete, 6 running              Load avg: 1.63, 1.39, 1.67
+>>> 03:37:34 Jobs: 28 of 39 complete, 6 running              Load avg: 1.63, 1.39, 1.67
+>>> 03:37:34 Jobs: 28 of 39 complete, 7 running              Load avg: 1.63, 1.39, 1.67
+>>> 03:37:34 Emerging binary (35 of 39) dev-rust/protobuf-codegen-2.24.1::chromiumos
+>>> 03:37:34 Jobs: 28 of 39 complete, 7 running              Load avg: 1.63, 1.39, 1.67
+>>> 03:37:34 Installing (32 of 39) dev-rust/codespan-reporting-0.11.1::chromiumos
+>>> 03:37:34 Jobs: 28 of 39 complete, 7 running              Load avg: 1.63, 1.39, 1.67
+>>> 03:37:34 Jobs: 28 of 39 complete, 6 running              Load avg: 1.63, 1.39, 1.67
+>>> 03:37:38 Completed (32 of 39) dev-rust/codespan-reporting-0.11.1::chromiumos
+>>> 03:37:38 Jobs: 28 of 39 complete, 6 running              Load avg: 1.66, 1.40, 1.67
+>>> 03:37:38 Jobs: 29 of 39 complete, 6 running              Load avg: 1.66, 1.40, 1.67
+>>> 03:37:41 Installing (35 of 39) dev-rust/protobuf-codegen-2.24.1::chromiumos
+>>> 03:37:41 Jobs: 29 of 39 complete, 6 running              Load avg: 1.66, 1.40, 1.67
+>>> 03:37:41 Jobs: 29 of 39 complete, 5 running              Load avg: 1.66, 1.40, 1.67
+>>> 03:37:44 Installing (33 of 39) dev-rust/vec_map-0.8.2::chromiumos
+>>> 03:37:44 Jobs: 29 of 39 complete, 5 running              Load avg: 1.69, 1.41, 1.67
+>>> 03:37:45 Jobs: 29 of 39 complete, 4 running              Load avg: 1.69, 1.41, 1.67
+>>> 03:37:45 Completed (35 of 39) dev-rust/protobuf-codegen-2.24.1::chromiumos
+>>> 03:37:45 Jobs: 29 of 39 complete, 4 running              Load avg: 1.69, 1.41, 1.67
+>>> 03:37:45 Jobs: 30 of 39 complete, 4 running              Load avg: 1.69, 1.41, 1.67
+>>> 03:37:48 Completed (33 of 39) dev-rust/vec_map-0.8.2::chromiumos
+>>> 03:37:48 Jobs: 30 of 39 complete, 4 running              Load avg: 1.71, 1.42, 1.68
+>>> 03:37:48 Jobs: 31 of 39 complete, 4 running              Load avg: 1.71, 1.42, 1.68
+>>> 03:37:48 Jobs: 31 of 39 complete, 5 running              Load avg: 1.71, 1.42, 1.68
+>>> 03:37:48 Emerging binary (36 of 39) dev-rust/clap-2.33.3::chromiumos
+>>> 03:37:48 Jobs: 31 of 39 complete, 5 running              Load avg: 1.71, 1.42, 1.68
+>>> 03:37:49 Installing (36 of 39) dev-rust/clap-2.33.3::chromiumos
+>>> 03:37:49 Jobs: 31 of 39 complete, 5 running              Load avg: 1.71, 1.42, 1.68
+>>> 03:37:49 Jobs: 31 of 39 complete, 4 running              Load avg: 1.71, 1.42, 1.68
+>>> 03:37:53 Completed (36 of 39) dev-rust/clap-2.33.3::chromiumos
+>>> 03:37:53 Jobs: 31 of 39 complete, 4 running              Load avg: 1.65, 1.42, 1.67
+>>> 03:37:53 Jobs: 32 of 39 complete, 4 running              Load avg: 1.65, 1.42, 1.67
+>>> 03:37:53 Jobs: 32 of 39 complete, 5 running              Load avg: 1.65, 1.42, 1.67
+>>> 03:37:53 Emerging binary (37 of 39) dev-util/cxxbridge-cmd-1.0.42::chromiumos
+>>> 03:37:53 Jobs: 32 of 39 complete, 5 running              Load avg: 1.65, 1.42, 1.67
+>>> 03:38:07 Installing (37 of 39) dev-util/cxxbridge-cmd-1.0.42::chromiumos
+>>> 03:38:07 Jobs: 32 of 39 complete, 5 running              Load avg: 1.43, 1.38, 1.66
+>>> 03:38:07 Jobs: 32 of 39 complete, 4 running              Load avg: 1.43, 1.38, 1.66
+>>> 03:38:11 Completed (37 of 39) dev-util/cxxbridge-cmd-1.0.42::chromiumos
+>>> 03:38:11 Jobs: 32 of 39 complete, 4 running              Load avg: 1.43, 1.38, 1.66
+>>> 03:38:11 Jobs: 33 of 39 complete, 4 running              Load avg: 1.43, 1.38, 1.66
+>>> 03:42:29 Installing (4 of 39) dev-embedded/coreboot-sdk-0.0.1-r110::chromiumos
+>>> 03:42:29 Jobs: 33 of 39 complete, 4 running              Load avg: 1.57, 1.06, 1.42
+>>> 03:42:29 Jobs: 33 of 39 complete, 3 running              Load avg: 1.57, 1.06, 1.42
+>>> 03:42:38 Completed (4 of 39) dev-embedded/coreboot-sdk-0.0.1-r110::chromiumos
+>>> 03:42:38 Jobs: 33 of 39 complete, 3 running              Load avg: 1.57, 1.07, 1.42
+>>> 03:42:38 Jobs: 34 of 39 complete, 3 running              Load avg: 1.57, 1.07, 1.42
+>>> 03:43:10 Installing (27 of 39) dev-lang/rust-bootstrap-1.53.0::chromiumos
+>>> 03:43:10 Jobs: 34 of 39 complete, 3 running              Load avg: 6.02, 2.12, 1.76
+>>> 03:43:10 Jobs: 34 of 39 complete, 2 running              Load avg: 6.02, 2.12, 1.76
+>>> 03:43:21 Installing (3 of 39) dev-lang/rust-1.51.0::chromiumos
+>>> 03:43:21 Jobs: 34 of 39 complete, 2 running              Load avg: 7.02, 2.46, 1.87
+>>> 03:43:21 Jobs: 34 of 39 complete, 1 running              Load avg: 7.02, 2.46, 1.87
+>>> 03:43:43 Installing (5 of 39) dev-embedded/ti50-sdk-0.0.2-r1::chromiumos
+>>> 03:43:43 Jobs: 34 of 39 complete, 1 running              Load avg: 8.88, 3.26, 2.16
+>>> 03:43:43 Jobs: 34 of 39 complete                         Load avg: 8.88, 3.26, 2.16
+>>> 03:44:07 Completed (5 of 39) dev-embedded/ti50-sdk-0.0.2-r1::chromiumos
+>>> 03:44:07 Jobs: 34 of 39 complete                         Load avg: 7.15, 3.31, 2.20
+>>> 03:44:07 Jobs: 35 of 39 complete                         Load avg: 7.15, 3.31, 2.20
+>>> 03:44:11 Completed (27 of 39) dev-lang/rust-bootstrap-1.53.0::chromiumos
+>>> 03:44:11 Jobs: 35 of 39 complete                         Load avg: 7.15, 3.31, 2.20
+>>> 03:44:11 Jobs: 36 of 39 complete                         Load avg: 7.15, 3.31, 2.20
+>>> 03:44:19 Completed (3 of 39) dev-lang/rust-1.51.0::chromiumos
+>>> 03:44:19 Jobs: 36 of 39 complete                         Load avg: 6.21, 3.23, 2.19
+>>> 03:44:19 Jobs: 37 of 39 complete                         Load avg: 6.21, 3.23, 2.19
+>>> 03:44:19 Jobs: 37 of 39 complete, 1 running              Load avg: 6.21, 3.23, 2.19
+>>> 03:44:19 Emerging binary (38 of 39) virtual/target-chromium-os-sdk-post-cross-1-r6::chromiumos
+>>> 03:44:19 Jobs: 37 of 39 complete, 1 running              Load avg: 6.21, 3.23, 2.19
+>>> 03:44:20 Installing (38 of 39) virtual/target-chromium-os-sdk-post-cross-1-r6::chromiumos
+>>> 03:44:20 Jobs: 37 of 39 complete, 1 running              Load avg: 6.21, 3.23, 2.19
+>>> 03:44:21 Jobs: 37 of 39 complete                         Load avg: 6.21, 3.23, 2.19
+>>> 03:44:24 Completed (38 of 39) virtual/target-chromium-os-sdk-post-cross-1-r6::chromiumos
+>>> 03:44:24 Jobs: 37 of 39 complete                         Load avg: 5.87, 3.21, 2.19
+>>> 03:44:24 Jobs: 38 of 39 complete                         Load avg: 5.87, 3.21, 2.19
+>>> 03:44:24 Jobs: 38 of 39 complete, 1 running              Load avg: 5.87, 3.21, 2.19
+>>> 03:44:24 Emerging binary (39 of 39) virtual/target-sdk-post-cross-1-r3::chromiumos
+>>> 03:44:24 Jobs: 38 of 39 complete, 1 running              Load avg: 5.87, 3.21, 2.19
+>>> 03:44:25 Installing (39 of 39) virtual/target-sdk-post-cross-1-r3::chromiumos
+>>> 03:44:25 Jobs: 38 of 39 complete, 1 running              Load avg: 5.87, 3.21, 2.19
+>>> 03:44:25 Jobs: 38 of 39 complete                         Load avg: 5.87, 3.21, 2.19
+>>> 03:44:29 Completed (39 of 39) virtual/target-sdk-post-cross-1-r3::chromiumos
+>>> 03:44:29 Jobs: 38 of 39 complete                         Load avg: 5.48, 3.17, 2.18
+>>> 03:44:29 Jobs: 39 of 39 complete                         Load avg: 5.48, 3.17, 2.18
+
+03:44:30 INFO    : Bootstrapping depot_tools
+03:44:50 INFO    : Rebuilding Portage cache
+03:44:50 INFO    : Running: /mnt/host/source/chromite/bin/parallel_emerge --regen --quiet
+03:44:57 INFO    : Cleaning stale binpkgs
+cli --exclude option
+>>> Building file list for packages cleaning...
+>>> Cleaning binary packages...
+ [   93.3 K ] sys-apps/mosys-1.2.3-r1310
+ [   32.5 K ] virtual/target-chromium-os-sdk-post-cross-1-r6
+
+
+ [    1.7 K ] Packages Index
+ ===========
+ [  127.5 K ] Total space from 2 files were freed in the packages directory
+03:44:58 INFO    : Updating the SDK
+03:45:01 INFO    : Running: sudo -E /mnt/host/source/chromite/bin/parallel_emerge -uNv --with-bdeps=y --getbinpkg --useoldpkg-atoms=dev-lang/go --useoldpkg-atoms=dev-libs/elfutils --useoldpkg-atoms=sys-devel/binutils --useoldpkg-atoms=sys-devel/gcc --useoldpkg-atoms=sys-devel/llvm --useoldpkg-atoms=sys-kernel/linux-headers --useoldpkg-atoms=sys-libs/glibc --useoldpkg-atoms=sys-libs/libcxx --useoldpkg-atoms=sys-libs/libcxxabi --useoldpkg-atoms=sys-libs/llvm-libunwind --useoldpkg-atoms=dev-lang/rust --useoldpkg-atoms=dev-lang/rust-bootstrap --useoldpkg-atoms=virtual/target-sdk-post-cross --useoldpkg-atoms=dev-embedded/coreboot-sdk --useoldpkg-atoms=dev-embedded/ti50-sdk --deep virtual/target-sdk world
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies  ..... done!
+
+Total: 0 packages, Size of downloads: 0 KiB
+
+Nothing to merge; quitting.
+
+03:45:46 INFO    : Running: sudo -E /mnt/host/source/chromite/bin/parallel_emerge -uNv --with-bdeps=n --oneshot --getbinpkg --deep --usepkgonly virtual/target-sdk-nobdeps
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies  ...... done!
+
+Total: 0 packages, Size of downloads: 0 KiB
+
+Nothing to merge; quitting.
+
+Scanning Configuration files...
+Exiting: Nothing left to do; exiting. :)
+03:45:51 INFO    : Deep cleaning stale binpkgs
+cli --exclude option
+>>> Building file list for packages cleaning...
+>>> Your packages directory was already clean.
+03:45:52 INFO    : Elapsed time (update_chroot): 18m52s
+03:45:52.434: INFO: Creating sysroot directories.
+03:45:52.469: INFO: Installing configurations into sysroot.
+03:45:52.689: INFO: Setting up portage in the sysroot.
+03:45:53.754: INFO: Selecting profile: /mnt/host/source/src/overlays/overlay-kukui/profiles/base for /build/kukui
+03:45:53.974: INFO: Updating toolchain.
+03:45:55.269: INFO: Installing toolchain to the board root: /build/kukui
+03:45:55.270: INFO: run: sudo -- tar -I /usr/bin/lbzip2 -xpf /var/lib/portage/pkgs/cross-armv7a-cros-linux-gnueabihf/glibc-2.32-r15.tbz2 -C /tmp/tmpbditzgnn
+03:45:56.013: INFO: run: sudo -- rsync --archive /tmp/tmpbditzgnn/usr/armv7a-cros-linux-gnueabihf/ /build/kukui/
+03:45:56.258: INFO: run: sudo -- rsync --archive /tmp/tmpbditzgnn/usr/lib/debug/usr/armv7a-cros-linux-gnueabihf/ /build/kukui/usr/lib/debug/
+03:45:57.397: INFO: run: sudo --preserve-env 'CROS_METRICS_DIR=/tmp/tmphf5qkkwd' -- /mnt/host/source/chromite/bin/parallel_emerge '--board=kukui' '--root-deps=rdeps' --select --quiet --getbinpkg --usepkg sys-kernel/linux-headers sys-libs/gcc-libs sys-libs/libcxxabi sys-libs/libcxx
+03:45:58.684: INFO: run: /usr/bin/python3 /mnt/host/source/.cache/common/gsutil_4.60.tar.gz/gsutil/gsutil -o 'Boto:num_retries=10' cp -v -- gs://chromeos-prebuilt/board/arm-generic/postsubmit-R94-14141.0.0-22398-8839429342591455665/packages/Packages /tmp/tmp22vswak5.tmp
+>>> 03:46:03 Emerging binary (1 of 4) sys-libs/gcc-libs-10.2.0-r1::chromiumos for /build/kukui/
+>>> 03:46:03 Emerging binary (2 of 4) sys-kernel/linux-headers-4.14-r38::chromiumos for /build/kukui/
+>>> 03:46:06 Installing (2 of 4) sys-kernel/linux-headers-4.14-r38::chromiumos to /build/kukui/
+>>> 03:46:08 Installing (1 of 4) sys-libs/gcc-libs-10.2.0-r1::chromiumos to /build/kukui/
+>>> 03:46:09 Recording sys-kernel/linux-headers in "world" favorites file...
+>>> 03:46:09 Completed (2 of 4) sys-kernel/linux-headers-4.14-r38::chromiumos to /build/kukui/
+>>> 03:46:10 Recording sys-libs/gcc-libs in "world" favorites file...
+>>> 03:46:10 Completed (1 of 4) sys-libs/gcc-libs-10.2.0-r1::chromiumos to /build/kukui/
+>>> 03:46:10 Emerging binary (3 of 4) sys-libs/libcxxabi-12.0_pre422132-r3::chromiumos for /build/kukui/
+>>> 03:46:11 Installing (3 of 4) sys-libs/libcxxabi-12.0_pre422132-r3::chromiumos to /build/kukui/
+>>> 03:46:14 Recording sys-libs/libcxxabi in "world" favorites file...
+>>> 03:46:14 Completed (3 of 4) sys-libs/libcxxabi-12.0_pre422132-r3::chromiumos to /build/kukui/
+>>> 03:46:14 Emerging binary (4 of 4) sys-libs/libcxx-12.0_pre422132-r4::chromiumos for /build/kukui/
+>>> 03:46:14 Installing (4 of 4) sys-libs/libcxx-12.0_pre422132-r4::chromiumos to /build/kukui/
+>>> 03:46:17 Recording sys-libs/libcxx in "world" favorites file...
+>>> 03:46:17 Completed (4 of 4) sys-libs/libcxx-12.0_pre422132-r4::chromiumos to /build/kukui/

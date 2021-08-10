@@ -1,0 +1,61 @@
+Removable device(s) found. Please select/confirm to continue:
+  [0]: Generic USB Storage 28.9G (/dev/sdd)
+Please choose an option [0-0]: 21:01:28: NOTICE: run: sudo 'CROS_CACHEDIR=/mnt/host/source/.cache' -- dd 'if=/mnt/host/source/devserver/static/kukui/R94-14142.0.2021_08_09_1307-a1/chromiumos_image.bin' 'of=/dev/sdd' 'bs=4M' 'iflag=fullblock' 'oflag=direct' 'conv=fdatasync'
+1662+1 records in
+1662+1 records out
+6973121024 bytes (7.0 GB, 6.5 GiB) copied, 402.107 s, 17.3 MB/s
+GPT PMBR size mismatch (13619376 != 60637183) will be corrected by write.
+The backup GPT table is not on the end of the device. This problem will be corrected by write.
+Checking that no-one is using this disk right now ... OK
+
+Disk /dev/sdd: 28.91 GiB, 31046238208 bytes, 60637184 sectors
+Disk model: MassStorageClass
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 5D2B14A7-B9FC-1C4C-B581-EA54E7D858F4
+
+Old situation:
+
+Device       Start      End Sectors  Size Type
+/dev/sdd1  5218304 13619328 8401025    4G Linux filesystem
+/dev/sdd2       69    65604   65536   32M ChromeOS kernel
+/dev/sdd3   303104  5218303 4915200  2.3G ChromeOS root fs
+/dev/sdd4    65605   131140   65536   32M ChromeOS kernel
+/dev/sdd5   299008   303103    4096    2M ChromeOS root fs
+/dev/sdd6       65       65       1  512B ChromeOS kernel
+/dev/sdd7       66       66       1  512B ChromeOS root fs
+/dev/sdd8   135168   167935   32768   16M Linux filesystem
+/dev/sdd9       67       67       1  512B ChromeOS reserved
+/dev/sdd10      68       68       1  512B ChromeOS reserved
+/dev/sdd11      64       64       1  512B unknown
+/dev/sdd12  167936   299007  131072   64M EFI System
+
+Partition table entries are not in disk order.
+
+>>> 
+New situation:
+Disklabel type: gpt
+Disk identifier: 5D2B14A7-B9FC-1C4C-B581-EA54E7D858F4
+
+Device       Start      End Sectors  Size Type
+/dev/sdd1  5218304 13619328 8401025    4G Linux filesystem
+/dev/sdd2       69    65604   65536   32M ChromeOS kernel
+/dev/sdd3   303104  5218303 4915200  2.3G ChromeOS root fs
+/dev/sdd4    65605   131140   65536   32M ChromeOS kernel
+/dev/sdd5   299008   303103    4096    2M ChromeOS root fs
+/dev/sdd6       65       65       1  512B ChromeOS kernel
+/dev/sdd7       66       66       1  512B ChromeOS root fs
+/dev/sdd8   135168   167935   32768   16M Linux filesystem
+/dev/sdd9       67       67       1  512B ChromeOS reserved
+/dev/sdd10      68       68       1  512B ChromeOS reserved
+/dev/sdd11      64       64       1  512B unknown
+/dev/sdd12  167936   299007  131072   64M EFI System
+
+Partition table entries are not in disk order.
+
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.
+21:08:11: NOTICE: cros flash completed successfully in 7m14.800s
